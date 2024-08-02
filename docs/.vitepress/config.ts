@@ -3,13 +3,22 @@ import { defineConfig } from 'vitepress';
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
   lang: 'en-US',
-  title: 'VitePress',
-  description: 'Vite & Vue powered static site generator.',
+  title: "CodeQuest.dev",
+  description: "An free guide for software development interviews.",
+
+  lastUpdated: true,
+
+  cleanUrls: true,  
+
 
   themeConfig: {
+    socialLinks: [
+      {
+        icon: "github",
+        link: "https://github.com/SouravBandyopadhyay/codeQuest.dev",
+      },
+    ],
     nav: [
-      { text: 'Example', link: '/example' },
-
       // {
       //   text: 'Dropdown Menu',
       //   items: [
@@ -20,16 +29,29 @@ export default defineConfig({
       // },
 
       // ...
+      { text: "Support this guide", link: "/support" }
     ],
 
     sidebar: [
       {
-        // text: 'Guide',
+        text: 'Guide',
         items: [
-          { text: 'Example', link: '/example' },
+          { text: "Preface", link: "/preface" }
+          // ...
+        ],
+      },
+      {
+        text: 'Question-Bank',
+        items: [
+          { text: 'Javascript-Questions', link: '/javascript-questions' },
           // ...
         ],
       },
     ],
+    // footer: {
+    //   message: 'Made By Sourav Bandyopadhyay',
+    //   // copyright: 'Copyright © 2019-present Evan You'
+    // }
   },
+
 });
