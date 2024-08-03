@@ -5,7 +5,7 @@ export default defineConfig({
   lang: "en-US",
   title: "CodeQuest.dev",
   description: "An free guide for software development interviews.",
-
+  base: "/",
   lastUpdated: true,
 
   cleanUrls: true,
@@ -74,5 +74,5 @@ export default defineConfig({
     //   // copyright: 'Copyright © 2019-present Evan You'
     // }
   },
-  base: "./",
+
 });
