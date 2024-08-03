@@ -1,15 +1,28 @@
-import { defineConfig } from 'vitepress';
+import { defineConfig } from "vitepress";
 
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
-  lang: 'en-US',
+  lang: "en-US",
   title: "CodeQuest.dev",
   description: "An free guide for software development interviews.",
 
   lastUpdated: true,
 
-  cleanUrls: true,  
-
+  cleanUrls: true,
+  head: [
+    [
+      "script",
+      {
+        async: "true",
+        src: "https://www.googletagmanager.com/ns.html?id=GTM-WPJNPGLK",
+      },
+    ],
+    [
+      "script",
+      {},
+      "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'GTM-WPJNPGLK');",
+    ],
+  ],
 
   themeConfig: {
     socialLinks: [
@@ -29,21 +42,21 @@ export default defineConfig({
       // },
 
       // ...
-      { text: "Support this guide", link: "/support" }
+      { text: "Support this guide", link: "/support" },
     ],
 
     sidebar: [
       {
-        text: 'Guide',
+        text: "Guide",
         items: [
-          { text: "Preface", link: "/preface" }
+          { text: "Preface", link: "/preface" },
           // ...
         ],
       },
       {
-        text: 'Question-Bank',
+        text: "Question-Bank",
         items: [
-          { text: 'Javascript-Questions', link: '/javascript-questions' },
+          { text: "Javascript-Questions", link: "/javascript-questions" },
           // ...
         ],
       },
@@ -53,5 +66,4 @@ export default defineConfig({
     //   // copyright: 'Copyright © 2019-present Evan You'
     // }
   },
-
 });
