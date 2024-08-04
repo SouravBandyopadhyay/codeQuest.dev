@@ -57,18 +57,28 @@ export default defineConfig({
           // ...
         ],
       },
+      // {
+      //   text: "Question-Bank",
+      //   items: [
+      //     { text: "Javascript-Questions", link: "/javascript-questions" },
+      //     // ...
+      //   ],
+      // },
       {
         text: "Question-Bank",
         items: [
-          { text: "Javascript-Questions", link: "/javascript-questions" },
-          // ...
+          {
+            text: "Javascript-Questions ",
+            collapsed: false,
+            items: [{ text: "Beginner-Level", link: "/javascript-questions" }],
+          },
         ],
       },
     ],
-    // footer: {
-    //   message: 'Made By Sourav Bandyopadhyay',
-    //   // copyright: 'Copyright © 2019-present Evan You'
-    // }
-  },
 
+    footer: {
+      message: "Made By Sourav Bandyopadhyay",
+      // copyright: 'Copyright © 2019-present Evan You'
+    },
+  },
 });

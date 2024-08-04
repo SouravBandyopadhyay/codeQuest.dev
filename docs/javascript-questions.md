@@ -13,6 +13,7 @@ Here are some of the most common and high-impact questions you might encounter i
 7. [What is a Callback Function?](#what-is-a-callback-function)
 8. [Explain passed by value and passed by reference.](#explain-passed-by-value-and-passed-by-reference)
 9. [Explain Types of Coercion in javascript.](#explain-types-of-coercion-in-javascript.)
+10. [What is callback hell?](#what-is-callback-hell)
 
 ## What is undefined?
 
@@ -20,7 +21,7 @@ In JavaScript, `undefined` is a primitive data type that represents a value that
 
 In addition to being the value of an uninitialized variable, `undefined` can also be returned by a function that does not explicitly return a value.
 
-**Example:**
+::: details Example
 
 ```javascript
 var a; // Variable exists but no value is assigned
@@ -34,6 +35,8 @@ function foo() {
 }
 console.log(foo()); // Output: undefined
 ```
+
+:::
 
 ## What is null?
 
@@ -297,3 +300,82 @@ closureExample("Inside");
 // Outer Variable: Outside
 // Inner Variable: Inside
 ```
+
+## What is Callback Hell?
+
+**Callback Hell** is a term used to describe the situation where multiple nested callbacks are used to handle asynchronous operations in JavaScript, leading to code that can be difficult to read, debug, and maintain.
+
+To avoid callback hell, a few solutions have been developed, such as using Promises, async/await syntax, or functional programming concepts like map and reduce. These approaches allow developers to write asynchronous code in a more declarative and linear style, without the need for nested callbacks.
+
+::: details Example
+
+```javascript
+getUser(userId, (user) => {
+  getOrders(user.id, (orders) => {
+    getProducts(orders, (products) => {
+      displayProducts(products);
+    });
+  });
+});
+```
+
+:::
+
+## What are Pure and Impure functions?
+
+In JavaScript, functions can be categorized as pure or impure based on their behavior and the effect they have on their environment. Understanding the distinction between pure and impure functions is crucial for writing predictable and maintainable code.
+
+### Pure Functions
+
+A pure function is a function that:
+
+- Given the same input, always returns the same output.
+- Produces no side effects (i.e., it doesn't modify any external state or variables).
+
+#### Benefits of Pure Functions
+
+- **Predictable**: Easier to understand and test since their output is consistent for the same input.
+- **Reusable**: Can be used in different contexts without worrying about side effects.
+- **Optimizable**: Can be memoized to improve performance.
+
+::: details Example of a Pure Function
+
+```javascript
+function add(a, b) {
+  return a + b;
+}
+
+console.log(add(2, 3)); // Output: 5
+console.log(add(2, 3)); // Output: 5 (same input, same output)
+```
+
+:::
+
+### Impure Functions
+
+An impure function is a function that:
+
+- May return different outputs for the same input.
+- Produces side effects (e.g., modifying a global variable, logging to the console, making HTTP requests).
+
+#### Drawbacks of Impure Functions
+
+- **Unpredictable**: Harder to test and debug due to varying outputs and side effects.
+- **Less Reusable**: Can't be reliably reused in different contexts.
+- **Harder to Optimize**: Can't be memoized easily due to changing outputs.
+
+::: details Example of an Impure Function
+
+```javascript
+let counter = 0;
+
+function incrementCounter() {
+  counter += 1;
+  return counter;
+}
+
+console.log(incrementCounter()); // Output: 1
+console.log(incrementCounter()); // Output: 2 (different output for the same call)
+```
+
+:::

@@ -22,7 +22,6 @@ Welcome to CodeQuest, your one-stop resource for mastering technical interviews.
 
 - **Comprehensive Coverage:** From basic concepts to advanced topics, we cover it all.
 - **Actionable Advice:** Practical tips and strategies you can apply right away.
-- **Community Focused:** Join a community of learners and professionals helping each other succeed.
 
 ## How to Navigate?
 
