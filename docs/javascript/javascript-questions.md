@@ -9,11 +9,13 @@ Here are some of the most common and high-impact questions you might encounter i
 3. [What is Hoisting?](#what-is-hoisting)
 4. [What are Promises?](#what-are-promises)
 5. [What is a Temporal Dead Zone?](#what-is-a-temporal-dead-zone)
-6. [Data Types in JavaScript](#data-types-in-javaScript)
+6. [Data Types in JavaScript](#data-types-in-javascript)
 7. [What is a Callback Function?](#what-is-a-callback-function)
 8. [Explain passed by value and passed by reference.](#explain-passed-by-value-and-passed-by-reference)
-9. [Explain Types of Coercion in javascript.](#explain-types-of-coercion-in-javascript.)
+9. [Explain Types of Coercion in javascript](#explain-types-of-coercion-in-javascript)
 10. [What is callback hell?](#what-is-callback-hell)
+12. [What are Pure and Impure functions?](#what-are-pure-and-impure-functions)
+11. [What do you mean by Self Invoking Functions?](#what-do-you-mean-by-self-invoking-functions)
 
 ## What is undefined?
 
@@ -219,7 +221,19 @@ In JavaScript, primitive data types are passed by value and non-primitive data t
 
 When a value is passed by value, a copy of the actual value is passed to the function. Changes to the value inside the function do not affect the original value.
 
-```javascript
+### Passed by Value
+
+When a value is passed by reference, a reference to the original value is passed to the function. Changes to the value inside the function affect the original value.
+
+
+:::tip NOTE
+
+- **Primitive types (e.g., numbers, strings, booleans):** Passed by value.
+- **Non-primitive types (e.g., objects, arrays):** Passed by reference.
+  :::
+
+:::code-group
+```javascript [Passed by Value]
 function modifyValue(x) {
   x = 10;
 }
@@ -230,12 +244,7 @@ console.log(a); // Output: 5
 
 //Here, a is passed by value, so the function modifyValue does not alter the original value of a.
 ```
-
-### Passed by Value
-
-When a value is passed by reference, a reference to the original value is passed to the function. Changes to the value inside the function affect the original value.
-
-```javascript
+```javascript [Pass By Reference]
 function modifyObject(obj) {
   obj.name = "John";
 }
@@ -247,11 +256,9 @@ console.log(person.name); // Output: John
 //In this case, person is passed by reference, so the function modifyObject alters the original object.
 ```
 
-:::tip NOTE
+:::
 
-- **Primitive types (e.g., numbers, strings, booleans):** Passed by value.
-- **Non-primitive types (e.g., objects, arrays):** Passed by reference.
-  :::
+
 
 ## Explain Types of Coercion in javascript.
 
@@ -320,27 +327,34 @@ getUser(userId, (user) => {
 ```
 
 :::
-
-## What are Pure and Impure functions?
+## What are Pure and Impure Functions?
 
 In JavaScript, functions can be categorized as pure or impure based on their behavior and the effect they have on their environment. Understanding the distinction between pure and impure functions is crucial for writing predictable and maintainable code.
 
-### Pure Functions
+### Comparison of Pure and Impure Functions
 
-A pure function is a function that:
+| **Aspect**         | **Pure Functions**                                         | **Impure Functions**                                      |
+|--------------------|------------------------------------------------------------|-----------------------------------------------------------|
+| **Definition**     | Always returns the same output for the same input.         | May return different outputs for the same input.          |
+| **Side Effects**   | No side effects; does not modify external state.           | Causes side effects; can modify external state or variables. |
+| **Predictability** | Highly predictable and easy to test.                       | Unpredictable and harder to test due to varying outputs.   |
+| **Reusability**    | Highly reusable in different contexts without concerns.    | Less reusable due to potential side effects and changing behavior. |
+| **Optimization**   | Can be easily memoized for performance improvement.        | Difficult to optimize through memoization.                |
 
-- Given the same input, always returns the same output.
-- Produces no side effects (i.e., it doesn't modify any external state or variables).
-
-#### Benefits of Pure Functions
+### Benefits of Pure Functions
 
 - **Predictable**: Easier to understand and test since their output is consistent for the same input.
 - **Reusable**: Can be used in different contexts without worrying about side effects.
 - **Optimizable**: Can be memoized to improve performance.
 
-::: details Example of a Pure Function
+### Drawbacks of Impure Functions
 
-```javascript
+- **Unpredictable**: Harder to test and debug due to varying outputs and side effects.
+- **Less Reusable**: Can't be reliably reused in different contexts.
+- **Harder to Optimize**: Can't be memoized easily due to changing outputs.
+
+::: code-group 
+```javascript [Pure Function]
 function add(a, b) {
   return a + b;
 }
@@ -349,24 +363,8 @@ console.log(add(2, 3)); // Output: 5
 console.log(add(2, 3)); // Output: 5 (same input, same output)
 ```
 
-:::
 
-### Impure Functions
-
-An impure function is a function that:
-
-- May return different outputs for the same input.
-- Produces side effects (e.g., modifying a global variable, logging to the console, making HTTP requests).
-
-#### Drawbacks of Impure Functions
-
-- **Unpredictable**: Harder to test and debug due to varying outputs and side effects.
-- **Less Reusable**: Can't be reliably reused in different contexts.
-- **Harder to Optimize**: Can't be memoized easily due to changing outputs.
-
-::: details Example of an Impure Function
-
-```javascript
+```javascript [Impure Function]
 let counter = 0;
 
 function incrementCounter() {
@@ -375,7 +373,22 @@ function incrementCounter() {
 }
 
 console.log(incrementCounter()); // Output: 1
-console.log(incrementCounter()); // Output: 2 (different output for the same call)
+console.log(incrementCounter()); // Output: 2 (different output for the same call)```
 ```
+:::
+## What do you mean by Self Invoking Functions?
+IIFE stands for Immediately Invoked Function Expression, and it is a JavaScript function that is executed as soon as it is defined. An IIFE is used to create a new scope for the function, which helps to avoid polluting the global namespace with variables and functions.
 
+::: details Example For Self Invoking Function
+```javascript
+(function() {
+  var x = 5;
+  console.log(x);
+})();
+
+function sayHi() {
+  return (() => 0)();
+}
+console.log(typeof sayHi()); // number 
+```
 :::

@@ -70,7 +70,7 @@ export default defineConfig({
           {
             text: "Javascript-Questions ",
             collapsed: false,
-            items: [{ text: "Beginner-Level", link: "/javascript-questions" }],
+            items: [{ text: "Beginner-Level", link: "/javascript/javascript-questions" },{ text: "Intermediate-Level", link: "/javascript/intermediate-questions" }],
           },
         ],
       },

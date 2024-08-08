@@ -25,9 +25,9 @@ This resource is, and will remain, completely free. If you find it valuable, I w
 
 </div>
 
-## Target audience
+<!-- ## Target audience
 
-This guide is designed for both new and seasoned software engineering candidates, focusing on individual contributor (IC) roles rather than engineering management positions. While some sections may still be useful for those interviewing for management roles, much of the content is tailored for IC candidates.
+This guide is designed for both new and seasoned software engineering candidates, focusing on individual contributor (IC) roles rather than engineering management positions. While some sections may still be useful for those interviewing for management roles, much of the content is tailored for IC candidates. -->
 
 ## Goals and non-goals
 
