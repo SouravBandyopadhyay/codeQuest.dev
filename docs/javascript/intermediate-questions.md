@@ -8,6 +8,7 @@ This category is for those ready to dive deeper. You'll find questions with code
 2. [What are WeakSet and WeakMap?](#what-are-weakset-and-weakmap)
 3. [What is Debouncing?](#what-is-a-debouncing)
 4. [What is Throttling?](#what-is-throttling)
+5. [What are higher order functions?](#what-are-higher-order-functions)
 
 
 ## What are Browser APIs?
@@ -55,6 +56,7 @@ window.addEventListener('resize', debounce(() => {
 :::
 
 ## What is Throttling?
+
 Throttling is a technique that limits the execution of a function to once in a specified time interval, regardless of how often the event occurs. Unlike debouncing, throttling guarantees the function will be executed at regular intervals.
 
 :::details Example: Throttling a Function
@@ -84,3 +86,64 @@ window.addEventListener('scroll', throttle(() => {
 }, 200));
 
 ```
+:::
+
+
+
+
+
+
+## What are higher order functions?
+In JavaScript, a higher-order function is a function that either:
+
+- Takes one or more functions as arguments.
+- Returns a function as its result.
+
+Higher-order functions enable powerful functional programming techniques and can make code more modular and reusable.
+
+![function-image](../assets/higher-order.png "Higher Order Function")
+
+### Key Uses
+
+- **Function composition**: Combine smaller functions into more complex functions.
+- **Abstraction**: Simplify complex behavior by abstracting it away, making the code easier to manage and understand.
+- **Asynchronous programming**:  Handle asynchronous operations like callbacks and promises.
+
+
+
+
+
+
+## What is Currying?
+
+Currying is a functional programming technique in JavaScript where a function is transformed into a sequence of functions, each taking a single argument.
+
+**Currying** is a transformation of functions that translates a function from `f(a, b, c)` => `f(a)(b)(c)`
+
+> [!IMPORTANT]
+> The currying requires the function to have a fixed number of arguments.
+### Benefits of Currying
+
+- **Improves Function Reusability**: Allows partial application of functions, making them more flexible.
+- **Enhances Readability**: Can make code more readable by breaking down complex functions into simpler ones.
+- **Facilitates Function Composition**: Makes it easier to create higher-order functions and compose them.
+
+### Example
+
+Consider a function that multiplies three numbers:
+
+:::details Example of Currying
+```javascript
+function curryMultiply(a) {
+  return function (b) {
+    return function (c) {
+      return a * b * c;
+    };
+  };
+}
+
+
+const result = curryMultiply(2)(3)(4);
+console.log(result); // Output: 24
+```
+:::

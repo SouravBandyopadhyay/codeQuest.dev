@@ -16,6 +16,7 @@ Here are some of the most common and high-impact questions you might encounter i
 10. [What is callback hell?](#what-is-callback-hell)
 12. [What are Pure and Impure functions?](#what-are-pure-and-impure-functions)
 11. [What do you mean by Self Invoking Functions?](#what-do-you-mean-by-self-invoking-functions)
+12. [Difference Between forEach and map](#difference-between-forEach-and-map)
 
 ## What is undefined?
 
@@ -390,5 +391,37 @@ function sayHi() {
   return (() => 0)();
 }
 console.log(typeof sayHi()); // number 
+```
+:::
+
+
+
+
+## Difference Between `forEach` and `map`
+
+In JavaScript, `forEach` and `map` are both methods used to iterate over arrays, but they have distinct differences in terms of functionality and use cases.
+
+| Feature        | `forEach`                                    | `map`                                        |
+|----------------|----------------------------------------------|---------------------------------------------|
+| **Purpose**    | Executes a provided function once for each array element. | Creates a new array with the results of calling a provided function on every element. |
+| **Returns**    | `undefined`                                  | A new array with transformed elements.     |
+| **Mutates Original Array** | No                                           | No (creates a new array)                   |
+| **Chainable**  | No                                           | Yes                                         |
+| **Typical Use Case** | Performing side effects (e.g., logging, updating external variables). | Transforming data (e.g., modifying elements to a new form). |
+| **Performance** | Generally faster for simple operations due to lack of array creation. | Slightly slower due to the creation of a new array. |
+
+::: code-group 
+```javascript [Example .forEach]
+const numbers = [1, 2, 3, 4, 5];
+numbers.forEach(number => {
+  console.log(number * 2);
+});
+```
+
+```javascript [Example .map]
+const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers.map(number => number * 2);
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+
 ```
 :::
