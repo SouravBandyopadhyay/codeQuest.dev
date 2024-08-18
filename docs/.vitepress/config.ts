@@ -54,6 +54,7 @@ export default defineConfig({
         text: "Guide",
         items: [
           { text: "Preface", link: "/preface" },
+          { text: "Interview Ready", link: "/interview-preparedness" }
           // ...
         ],
       },

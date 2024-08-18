@@ -9,6 +9,7 @@ This category is for those ready to dive deeper. You'll find questions with code
 3. [What is Debouncing?](#what-is-a-debouncing)
 4. [What is Throttling?](#what-is-throttling)
 5. [What are higher order functions?](#what-are-higher-order-functions)
+6. [Deep Copy vs Shallow Copy](#deep-copy-vs-shallow-copy)
 
 
 ## What are Browser APIs?
@@ -147,3 +148,54 @@ const result = curryMultiply(2)(3)(4);
 console.log(result); // Output: 24
 ```
 :::
+
+
+
+
+## Deep Copy vs. Shallow Copy
+
+The concept dictate how data is duplicated and managed in memory.
+
+### Shallow Copy
+
+A shallow copy of an object creates a new object, but it does not create copies of nested objects. Instead, it copies references to the nested objects. This means that changes to the nested objects will be reflected in both the original and the copied object.
+
+```javascript
+const original = {
+  name: 'Alice',
+  address: {
+    city: 'Wonderland',
+    zip: '12345'
+  }
+};
+
+// Shallow copy using Object.assign()
+const shallowCopy = Object.assign({}, original);
+
+// Modifying the nested object in the shallow copy
+shallowCopy.address.city = 'New Wonderland';
+
+console.log(original.address.city); // Output: 'New Wonderland'
+console.log(shallowCopy.address.city); // Output: 'New Wonderland'
+```
+### Deep Copy
+A deep copy creates a new object and recursively copies all nested objects. Changes to the nested objects in the copied object do not affect the original object.
+
+```javascript
+const original = {
+  name: "Alice",
+  details: {
+    age: 30,
+    city: "New York"
+  }
+};
+
+// Creating a deep copy
+const deepCopy = JSON.parse(JSON.stringify(original));
+
+// Modify the nested object in the copy
+deepCopy.details.city = "Los Angeles";
+
+console.log(original.details.city); // Outputs: "New York"
+console.log(deepCopy.details.city); // Outputs: "Los Angeles"
+```
