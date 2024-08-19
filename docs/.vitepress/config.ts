@@ -26,6 +26,11 @@ export default defineConfig({
     
       gtag('config', 'G-9PZ9P0S989');`,
     ],
+    [
+      "script",
+      {},
+      ` window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };`,
+    ],
   ],
 
   themeConfig: {
