@@ -32,15 +32,7 @@ Create a LinkedIn message to connect with a professional at `[Company]`. Express
 **Usage:**  
 Use this prompt to craft compelling connection requests that increase your chances of making valuable professional connections.
 
-::: danger
-Let’s discuss what NOT to do when you request a connection on LinkedIn!
-- **DON’T** send a request without a message attached.
-- **DON’T** write multiple paragraphs about yourself or ramble on.
-- **DON’T** pitch your product/service in your connection request.
-- **DON’T** ask for favors before establishing a connection.
-- **DON’T** mention your "X amount of connections" (GROSS!) 🤢
-- **DON’T** try to automate this process.
-:::
+
 
 ### Example LinkedIn Message (Template)
 
@@ -55,6 +47,18 @@ Let’s discuss what NOT to do when you request a connection on LinkedIn!
 >
 > Best regards,  
 > [Your Name]”
+
+
+
+::: danger
+Let’s discuss what NOT to do when you request a connection on LinkedIn!
+- **DON’T** send a request without a message attached.
+- **DON’T** write multiple paragraphs about yourself or ramble on.
+- **DON’T** pitch your product/service in your connection request.
+- **DON’T** ask for favors before establishing a connection.
+- **DON’T** mention your "X amount of connections" (GROSS!) 🤢
+- **DON’T** try to automate this process.
+:::
 ---
 
 ## 3. Write a Resume from Scratch

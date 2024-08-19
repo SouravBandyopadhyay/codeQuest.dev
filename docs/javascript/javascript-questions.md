@@ -18,7 +18,7 @@ Here are some of the most common and high-impact questions you might encounter i
 11. [What do you mean by Self Invoking Functions?](#what-do-you-mean-by-self-invoking-functions)
 12. [Difference Between forEach and map](#difference-between-forEach-and-map)
 
-## What is undefined?
+## What is undefined? <Badge type="danger" text="High Frequency" />
 
 In JavaScript, `undefined` is a primitive data type that represents a value that is not assigned. When a variable is declared but not assigned a value, its value is `undefined`.
 
@@ -165,6 +165,9 @@ In the code above, attempting to access variables before they are declared resul
 ## Data Types in JavaScript
 
 JavaScript has two main categories of data types: **Primitive** and **Non-Primitive** (or **Reference**).
+
+
+![function-image](../assets/data-types-javascript.png "data-types-in-javascript")
 
 ### Primitive Data Types
 

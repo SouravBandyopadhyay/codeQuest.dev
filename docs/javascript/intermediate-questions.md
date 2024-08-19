@@ -199,3 +199,52 @@ deepCopy.details.city = "Los Angeles";
 console.log(original.details.city); // Outputs: "New York"
 console.log(deepCopy.details.city); // Outputs: "Los Angeles"
 ```
+
+
+## What is polyfill?
+
+A polyfill in JavaScript is a piece of code used to provide functionality for features not supported in older browsers. It helps ensure compatibility by emulating modern JavaScript features.
+
+::: tip NOTE
+If an interviewer asks this question, a follow-up question might be to write a polyfill function.
+:::
+
+::: code-group 
+```javascript [Polyfill for Array.Map ]
+Array.prototype.customMap = function(callback) {
+  const result = [];
+  
+  for (let i = 0; i < this.length; i++) {
+    if (this.hasOwnProperty(i)) {
+      result.push(callback(this[i], i, this));
+    }
+  }
+  
+  return result;
+};
+
+const arr = [1, 2, 3];
+const square = x => x ** 2;
+const modifiedArr = arr.customMap(square);
+
+console.log(modifiedArr); // [1, 4, 9]
+```
+```javascript [Polyfill for Array.Filter]
+Array.prototype.customFilter = function(callback) {
+  const result = [];
+  
+  for (let i = 0; i < this.length; i++) {
+    if (this.hasOwnProperty(i) && callback(this[i], i, this)) {
+      result.push(this[i]);
+    }
+  }
+  
+  return result;
+};
+
+const arr = [1, 2, 3, 4, 5];
+const evens = arr.customFilter(el => el % 2 === 0);
+
+console.log(evens); // [2, 4]
+```
+:::
