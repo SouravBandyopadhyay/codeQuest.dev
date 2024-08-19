@@ -31,6 +31,7 @@ export default defineConfig({
       {},
       ` window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };`,
     ],
+    ["script", { src: "/_vercel/insights/script.js", defer: 'true' }]
   ],
 
   themeConfig: {
