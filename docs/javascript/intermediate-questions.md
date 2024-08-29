@@ -248,3 +248,50 @@ const evens = arr.customFilter(el => el % 2 === 0);
 console.log(evens); // [2, 4]
 ```
 :::
+
+
+## Getters and Setters
+
+**Getters** and **setters** in JavaScript are special methods that manage access to object properties. They allow you to define custom behavior when getting or setting property values.
+
+### Why Use Getters and Setters?
+
+- **Control Access**: Manage how properties are accessed and modified.
+- **Data Validation**: Ensure valid data is assigned to properties.
+- **Computed Properties**: Create properties that are dynamically calculated.
+
+#### Getter
+
+A getter is used to retrieve the value of a property. It's defined using the `get` keyword and behaves like a property, not a method.
+
+#### Setter
+A setter is used to set the value of a property. It's defined using the `set` keyword and takes one argument—the value to be assigned.
+
+
+::: code-group 
+```javascript [Getter Example]
+let person = {
+  _name: 'John',
+  get name() {
+    return this._name;
+  }
+};
+
+console.log(person.name); // Output: John
+// In this example, the name getter returns the value of _name. 
+// Note that the getter does not use parentheses.
+```
+
+
+```javascript [Setter Example]
+let person = {
+  _name: '',
+  set name(value) {
+    this._name = value;
+  }
+};
+
+person.name = 'Jane';
+console.log(person._name); // Output: Jane
+```
+:::
