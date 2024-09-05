@@ -10,6 +10,8 @@ This category is for those ready to dive deeper. You'll find questions with code
 4. [What is Throttling?](#what-is-throttling)
 5. [What are higher order functions?](#what-are-higher-order-functions)
 6. [Deep Copy vs Shallow Copy](#deep-copy-vs-shallow-copy)
+7. [What is Polyfill?](#what-is-polyfill)
+8. [Getters and Setters](#getters-and-setters)
 
 
 ## What are Browser APIs?
@@ -201,7 +203,7 @@ console.log(deepCopy.details.city); // Outputs: "Los Angeles"
 ```
 
 
-## What is polyfill?
+## What is Polyfill?
 
 A polyfill in JavaScript is a piece of code used to provide functionality for features not supported in older browsers. It helps ensure compatibility by emulating modern JavaScript features.
 

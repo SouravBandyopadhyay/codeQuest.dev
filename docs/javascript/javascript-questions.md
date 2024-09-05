@@ -404,6 +404,10 @@ console.log(typeof sayHi()); // number
 
 In JavaScript, `forEach` and `map` are both methods used to iterate over arrays, but they have distinct differences in terms of functionality and use cases.
 
+> [!IMPORTANT]
+> If an interviewer asks you this question, it is likely that you will also be asked to provide an example.
+
+
 | Feature        | `forEach`                                    | `map`                                        |
 |----------------|----------------------------------------------|---------------------------------------------|
 | **Purpose**    | Executes a provided function once for each array element. | Creates a new array with the results of calling a provided function on every element. |
