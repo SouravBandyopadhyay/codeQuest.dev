@@ -16,8 +16,7 @@
 
 1. **[Get Started](#get-started)**: Kick off your journey with the [Preface](link_to_preface) to understand how to make the most of CodeQuest.
 2. **Explore Key Topics**: Access our curated **[articles](link_to_articles)**, **tutorials**, and **question banks** designed to target high-demand interview areas.
-3. **Contribute & Collaborate**: Check out our [Contributing Guide](link_to_contributing) to get involved in making CodeQuest better for everyone.
-4. **Stay Connected**: Star the repository to receive updates, and follow us on GitHub to stay in the loop on new content.
+3. **Stay Connected**: Star the repository to receive updates, and follow us on GitHub to stay in the loop on new content.
 
 ---
 
