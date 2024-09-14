@@ -12,6 +12,7 @@ This category is for those ready to dive deeper. You'll find questions with code
 6. [Deep Copy vs Shallow Copy](#deep-copy-vs-shallow-copy)
 7. [What is Polyfill?](#what-is-polyfill)
 8. [Getters and Setters](#getters-and-setters)
+9. [What is Tree Shaking](#what-is-tree-shaking)
 
 
 ## What are Browser APIs?
@@ -297,3 +298,29 @@ person.name = 'Jane';
 console.log(person._name); // Output: Jane
 ```
 :::
+
+
+## What is Tree Shaking?
+
+**Tree shaking** is a technique used in JavaScript (especially in module bundlers like Webpack or Rollup) to remove unused code from the final bundle. It's an important optimization for improving performance in modern web applications.
+
+### Key Concepts
+
+1. **Modules contain multiple functions**: Libraries or modules often have many functions or features, but you might not need all of them in your code.
+   
+2. **Tree shaking removes unused code**: Like pruning a tree, tree shaking removes the "branches" of code that are not being used in your project. This reduces the final bundle size.
+
+3. **Works with ES6 modules**: Tree shaking works best with ES6 modules (`import`/`export`). This is because ES6 modules have a static structure, which allows bundlers to analyze and determine which parts of the code are actually used.
+
+```javascript [Example]
+// utils.js
+export function add(a, b) { return a + b; }
+export function subtract(a, b) { return a - b; }
+
+// main.js
+import { add } from './utils';
+
+console.log(add(2, 3));
+```
+
+
