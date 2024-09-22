@@ -79,6 +79,11 @@ export default defineConfig({
             collapsed: false,
             items: [{ text: "Beginner-Level", link: "/javascript/javascript-questions" }, { text: "Intermediate-Level", link: "/javascript/intermediate-questions" }],
           },
+          {
+            text: "Node.js-Questions ",
+            collapsed: false,
+            items: [{ text: "Beginner-Level", link: "/node-js/beginner-level" }],
+          },
         ],
       },
     ],
