@@ -7,6 +7,7 @@ Here are some of the most common and high-impact questions you might encounter i
 ## Table of Contents
 
 1. [What is Node.js?](#what-is-node.js)
+2. [How does Node.js handle errors in asynchronous code?](#how-does-node.js-handle-errors-in-asynchronous-code?)
 
 
 ## What is Node.js?
@@ -42,3 +43,76 @@ Node.js is a JavaScript runtime built on Chrome's V8 engine, allowing developers
 
 ### Recommendation:
 - Aim to make most requests non-blocking to enhance application scalability and user experience.
+
+
+
+## How does Node.js handle errors in asynchronous code?
+In Node.js, error handling in asynchronous code is critical due to its event-driven, non-blocking nature. The primary methods include:
+1. **Callbacks**: An error-first callback pattern, where the first argument is reserved for an error and the second for the result.
+2. **Promises**: A cleaner approach using `.then()` and `.catch()` for error handling.
+3. **Async/Await**:  Built on Promises, allowing for a more readable syntax using try/catch block for error handling.
+
+
+:::code-group
+```javascript [Callbacks Example]
+function asyncOperation(callback) {
+    setTimeout(() => {
+        const error = null; // or new Error("Something went wrong");
+        const result = "Success";
+        callback(error, result);
+    }, 1000);
+}
+
+asyncOperation((error, result) => {
+    if (error) {
+        console.error("Error:", error);
+    } else {
+        console.log("Result:", result);
+    }
+});
+
+```
+```javascript [Promise Example]
+function asyncOperation() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const error = null; // or new Error("Something went wrong");
+            const result = "Success";
+            if (error) reject(error);
+            else resolve(result);
+        }, 1000);
+    });
+}
+
+asyncOperation()
+    .then(result => console.log("Result:", result))
+    .catch(error => console.error("Error:", error));
+
+```
+
+
+```javascript [Async/Await Example]
+async function asyncOperation() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const error = null; // or new Error("Something went wrong");
+            const result = "Success";
+            if (error) reject(error);
+            else resolve(result);
+        }, 1000);
+    });
+}
+
+async function execute() {
+    try {
+        const result = await asyncOperation();
+        console.log("Result:", result);
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+execute();
+```
+:::
+
