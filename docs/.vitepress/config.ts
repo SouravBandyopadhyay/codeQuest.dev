@@ -10,28 +10,29 @@ export default defineConfig({
 
   cleanUrls: true,
   head: [
+    //Google Analytics
+    [
+      'script',
+      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=GTM-WPJNPGLK' } //[!code focus]
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GTM-WPJNPGLK');` //[!code focus]
+    ],
+    
+    //Google AdSense
     [
       "script",
       {
-        async: "true",
-        src: "https://www.googletagmanager.com/gtag/js?id=G-9PZ9P0S989",
+        "data-ad-client": "ca-pub-3517052833771002", //[!code focus]
+        async: '',
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       },
     ],
-    [
-      "script",
-      {},
-      ` window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-9PZ9P0S989');`,
-    ],
-    [
-      "script",
-      {},
-      ` window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };`,
-    ],
-    ["script", { src: "/_vercel/insights/script.js", defer: 'true' }]
   ],
 
   themeConfig: {
