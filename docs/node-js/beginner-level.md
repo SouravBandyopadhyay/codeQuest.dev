@@ -6,8 +6,9 @@ Here are some of the most common and high-impact questions you might encounter i
 
 ## Table of Contents
 
-1. [What is Node.js?](#what-is-node.js)
-2. [How does Node.js handle errors in asynchronous code?](#how-does-node.js-handle-errors-in-asynchronous-code?)
+1. [What is Node.js?](#what-is-node-js)
+2. [How does Node.js handle errors in asynchronous code?](#how-does-node-js-handle-errors-in-asynchronous-code)
+3. [Event-Driven, Non-Blocking I/O in Node.js](#event-driven-non-blocking-i-o-in-node-js)
 
 
 ## What is Node.js?
@@ -43,7 +44,6 @@ Node.js is a JavaScript runtime built on Chrome's V8 engine, allowing developers
 
 ### Recommendation:
 - Aim to make most requests non-blocking to enhance application scalability and user experience.
-
 
 
 ## How does Node.js handle errors in asynchronous code?
@@ -115,4 +115,27 @@ async function execute() {
 execute();
 ```
 :::
+
+
+## Event-Driven, Non-Blocking I/O in Node.js
+Node.js uses an **event-driven, non-blocking I/O model** that makes it lightweight and efficient for building scalable applications. Here's how it works:
+
+### 1. Event-Driven Model
+- Node.js operates on an event loop. When a request is made (like reading a file or querying a database), it's processed in an asynchronous manner.  
+- Instead of waiting for the request to complete, Node.js listens for events and handles them when they occur, allowing other tasks to proceed.
+
+### 2. Non-Blocking I/O
+- Non-blocking I/O means operations (e.g., reading a file) don't stop the execution of other code. Node.js will continue running other tasks while waiting for I/O to finish.  
+- This model avoids the traditional thread-based approach of handling concurrent connections, where each thread would block waiting for an operation to complete.
+
+```javascript
+const fs = require('fs');
+
+fs.readFile('example.txt', 'utf8', (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+
+console.log('Reading file...');
+```
 
