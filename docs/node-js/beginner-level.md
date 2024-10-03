@@ -9,6 +9,7 @@ Here are some of the most common and high-impact questions you might encounter i
 1. [What is Node.js?](#what-is-node-js)
 2. [How does Node.js handle errors in asynchronous code?](#how-does-node-js-handle-errors-in-asynchronous-code)
 3. [Event-Driven, Non-Blocking I/O in Node.js](#event-driven-non-blocking-i-o-in-node-js)
+4. [package.json vs package-lock.json](#package-json-vs-package-lock-json)
 
 
 ## What is Node.js?
@@ -139,3 +140,29 @@ fs.readFile('example.txt', 'utf8', (err, data) => {
 console.log('Reading file...');
 ```
 
+
+## `package.json` vs `package-lock.json`
+
+### `package.json`
+
+- **Purpose**: 
+  - Central configuration file for Node.js projects.
+  - Describes project metadata, dependencies, and scripts to facilitate development and deployment.
+  - Helps npm (Node Package Manager) manage the installation of the project and its dependencies.
+  
+- **Key Features**:
+  - **Project Info**: Includes name, version, description, and entry point (e.g., `index.js`).
+  - **Dependencies**: Lists libraries required for production (`dependencies`) and development (`devDependencies`).
+  - **Scripts**: Defines executable commands for tasks (e.g., `npm start`, `npm test`).
+
+### `package-lock.json`
+
+- **Purpose**: 
+  - Automatically generated file that locks the specific versions of all installed packages and their dependencies.
+  - Ensures consistent package versions across different environments, preventing "works on my machine" issues.
+  - Facilitates faster installations by using cached versions and avoiding unnecessary updates.
+
+- **Key Features**:
+  - **Exact Versions**: Records the exact version of each package.
+  - **Dependency Tree**: Includes a detailed tree of all dependencies, including nested ones.
+  - **Integrity Hashes**: Contains hashes to verify the integrity of packages during installation.
