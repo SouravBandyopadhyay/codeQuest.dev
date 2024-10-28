@@ -13,6 +13,7 @@ This category is for those ready to dive deeper. You'll find questions with code
 7. [What is Polyfill?](#what-is-polyfill)
 8. [Getters and Setters](#getters-and-setters)
 9. [What is Tree Shaking](#what-is-tree-shaking)
+10. [How Does Prototypal Inheritance Work in JavaScript?](#how-does-prototypal-inheritance-work-in-javascript)
 
 
 ## What are Browser APIs?
@@ -322,5 +323,42 @@ import { add } from './utils';
 
 console.log(add(2, 3));
 ```
+
+
+## How Does Prototypal Inheritance Work in JavaScript?
+
+Prototypal inheritance is a mechanism in JavaScript where objects can inherit properties and methods from other objects. When you access a property on an object, JavaScript first checks that object itself. If the property is not found, it then follows the prototype chain, which consists of the object's prototype and continues up through its ancestors. This chain ends when it reaches an object whose prototype is `null`, at which point the search stops.
+
+
+### How It Works
+- **Prototype Chain**: Each object has a prototype. If a property is not found on the object, JavaScript checks the prototype and continues up the chain.
+- **Dynamic Nature**: You can add or change properties on the prototype at any time, affecting all objects that inherit from it.
+
+
+```javascript
+const animal = {
+    speak() {
+        console.log("Animal speaks");
+    }
+};
+
+const dog = Object.create(animal);
+dog.bark = function() {
+    console.log("Woof!");
+};
+
+dog.speak(); // Output: "Animal speaks"
+dog.bark();  // Output: "Woof!"
+```
+
+
+
+
+
+
+
+
+
+
 
 
