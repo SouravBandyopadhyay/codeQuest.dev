@@ -81,6 +81,11 @@ export default defineConfig({
             items: [{ text: "Beginner-Level", link: "/javascript/javascript-questions" }, { text: "Intermediate-Level", link: "/javascript/intermediate-questions" }],
           },
           {
+            text: "Design Patterns",
+            collapsed: false,
+            items: [{ text: "Introduction", link: "/design-patterns/intro" },{ text: "Command Pattern", link: "/design-patterns/command-pattern" }],
+          },
+          {
             text: "Node.js-Questions ",
             collapsed: false,
             items: [{ text: "Beginner-Level", link: "/node-js/beginner-level" }],
