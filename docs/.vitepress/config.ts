@@ -83,7 +83,7 @@ export default defineConfig({
           {
             text: "Design Patterns",
             collapsed: false,
-            items: [{ text: "Introduction", link: "/design-patterns/intro" },{ text: "Command Pattern", link: "/design-patterns/command-pattern" }],
+            items: [{ text: "Introduction", link: "/design-patterns/intro" },{ text: "Command Pattern", link: "/design-patterns/command-pattern" },{ text: "Module Pattern", link: "/design-patterns/module-pattern" }],
           },
           {
             text: "Node.js-Questions ",
