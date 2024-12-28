@@ -5,12 +5,11 @@ The **Singleton Pattern** is a design pattern that ensures a class has only **on
 ---
 
 ## Table of Contents
-1. [What is the Singleton Pattern?](#what-is-the-singleton-pattern)
-2. [Singleton Pattern Syntax Example](#singleton-pattern-syntax-example)
-3. [When to Use the Singleton Pattern](#when-to-use-the-singleton-pattern)
-4. [Advantages of the Singleton Pattern](#advantages-of-the-singleton-pattern)
-5. [Disadvantages of the Singleton Pattern](#disadvantages-of-the-singleton-pattern)
-6. [Conclusion](#conclusion)
+1. [What is the Singleton Pattern?](#_1-what-is-the-singleton-pattern)
+2. [Singleton Pattern Syntax Example](#_2-singleton-pattern-syntax-example)
+3. [When to Use the Singleton Pattern](#_3-when-to-use-the-singleton-pattern)
+4. [Trade-offs of the Singleton Pattern](#_4-trade-offs-of-the-singleton-pattern)
+5. [Conclusion](#_5-conclusion)
 
 ---
 
@@ -34,18 +33,13 @@ Let’s take a look at a simple example of how the Singleton Pattern works. We'l
 
 ```javascript
 class Logger {
-  // Private static variable to hold the instance
   static instance = null;
-
-  // Private constructor to prevent direct instantiation
   constructor() {
     if (Logger.instance) {
-      return Logger.instance;  // Return the existing instance
+      return Logger.instance; 
     }
-    Logger.instance = this;  // Save the instance
+    Logger.instance = this; 
   }
-
-  // Public method to log messages
   log(message) {
     console.log(message);
   }
@@ -72,36 +66,28 @@ console.log(logger1 === logger2);  // true, both are the same instance
 ## 3. When to Use the Singleton Pattern
 
 The **Singleton Pattern** is ideal in situations where:
-
 - You want to **ensure only one instance** of a class is created.
 - You need **global access** to that single instance (e.g., for logging, configuration settings, or shared resources).
 - Creating multiple instances of a class would be inefficient or unnecessary (e.g., database connections, cache objects).
 
 ---
 
-## 4. Advantages of the Singleton Pattern
+## 4. Trade-offs of the Singleton Pattern
 
-| **Advantage**               | **Description**                                                                                                              |
-|-----------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| **Controlled Access**        | The Singleton provides a controlled point of access to a shared resource, ensuring that there’s only one instance.           |
-| **Global Access**            | The Singleton makes the instance globally accessible, which can be useful for managing shared resources across the application. |
-| **Lazy Initialization**      | The instance is only created when it is needed, which can improve performance.                                                |
-| **Reduced Memory Usage**    | Since there is only one instance, it reduces memory usage compared to creating multiple instances of the same class.          |
-
----
-
-## 5. Disadvantages of the Singleton Pattern
-
-| **Disadvantage**             | **Description**                                                                                                              |
-|-----------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| **Hard to Test**             | Because the Singleton pattern provides global access to its instance, it can be difficult to isolate for unit testing.       |
-| **Hidden Dependencies**      | Other parts of your application may unknowingly depend on the Singleton, leading to tight coupling between components.         |
-| **Global State**             | The Singleton introduces global state, which can lead to unpredictable behavior, especially in multi-threaded environments.     |
-| **Difficult to Extend**      | The Singleton pattern can make it hard to extend or modify the class since you’re restricted to a single instance.            |
+| **Trade-off**            | **Description**                                                                                                              |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| **Controlled Access**     | The Singleton provides a controlled point of access to a shared resource, ensuring that there’s only one instance.           |
+| **Global Access**         | The Singleton makes the instance globally accessible, which can be useful for managing shared resources across the application. |
+| **Lazy Initialization**   | The instance is only created when it is needed, which can improve performance.                                                |
+| **Reduced Memory Usage**  | Since there is only one instance, it reduces memory usage compared to creating multiple instances of the same class.          |
+| **Hard to Test**          | The Singleton pattern provides global access, making it challenging to isolate it for unit testing.                         |
+| **Hidden Dependencies**   | Other parts of your application may unknowingly depend on the Singleton, leading to tight coupling between components.         |
+| **Global State**          | The Singleton introduces global state, which can lead to unpredictable behavior, especially in multi-threaded environments.     |
+| **Difficult to Extend**   | The Singleton pattern can make it hard to extend or modify the class since you’re restricted to a single instance.            |
 
 ---
 
-## 6. Conclusion
+## 5. Conclusion
 
 The **Singleton Pattern** is a valuable design pattern when you need to ensure that only **one instance** of a class exists and provide global access to that instance. It’s especially useful for managing shared resources like configuration settings, logging, or database connections.
 
