@@ -12,24 +12,27 @@ export default defineConfig({
   head: [
     //Google Analytics
     [
-      'script',
-      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=GTM-WPJNPGLK' } //[!code focus]
+      "script",
+      {
+        async: "",
+        src: "https://www.googletagmanager.com/gtag/js?id=GTM-WPJNPGLK",
+      }, //[!code focus]
     ],
     [
-      'script',
+      "script",
       {},
       `window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'GTM-WPJNPGLK');` //[!code focus]
+      gtag('config', 'GTM-WPJNPGLK');`, //[!code focus]
     ],
-    
+
     //Google AdSense
     [
       "script",
       {
         "data-ad-client": "ca-pub-3517052833771002", //[!code focus]
-        async: '',
+        async: "",
         src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       },
     ],
@@ -61,7 +64,7 @@ export default defineConfig({
         text: "Guide",
         items: [
           { text: "Preface", link: "/preface" },
-          { text: "Interview Ready", link: "/interview-preparedness" }
+          { text: "Interview Ready", link: "/interview-preparedness" },
           // ...
         ],
       },
@@ -78,13 +81,68 @@ export default defineConfig({
           {
             text: "Javascript-Questions ",
             collapsed: false,
-            items: [{ text: "Beginner-Level", link: "/javascript/javascript-questions" }, { text: "Intermediate-Level", link: "/javascript/intermediate-questions" }],
+            items: [
+              {
+                text: "Beginner-Level",
+                link: "/javascript/javascript-questions",
+              },
+              {
+                text: "Intermediate-Level",
+                link: "/javascript/intermediate-questions",
+              },
+            ],
+          },
+          {
+            text: "Design Patterns",
+            collapsed: false,
+            items: [
+              { text: "Introduction", link: "/design-patterns/intro" },
+              {
+                text: "Command Pattern",
+                link: "/design-patterns/command-pattern",
+              },
+              {
+                text: "Module Pattern",
+                link: "/design-patterns/module-pattern",
+              },
+              {
+                text: "Singleton Pattern",
+                link: "/design-patterns/singleton-pattern",
+              },
+            ],
           },
           {
             text: "Node.js-Questions ",
             collapsed: false,
-            items: [{ text: "Beginner-Level", link: "/node-js/beginner-level" }],
+            items: [
+              { text: "Beginner-Level", link: "/node-js/beginner-level" },
+            ],
           },
+        ],
+      },
+       {
+        text: "Article Series",
+        items: [
+          {
+            text: "Substack Series",
+            collapsed: false,
+            items: [
+              {
+                text: "CDNs",
+                link: "https://souravbandyopadhyay.substack.com/p/the-magic-of-cdns-how-they-help-websites",
+              },
+              
+               {
+                text: "Vertical vs Horizontal",
+                link: "https://souravbandyopadhyay.substack.com/p/the-magic-of-cdns-how-they-help-websites",
+              },
+               {
+                text: "Caching",
+                link: "https://souravbandyopadhyay.substack.com/p/the-power-of-caching-boosting-performance",
+              }
+            ],
+          },
+         
         ],
       },
     ],
