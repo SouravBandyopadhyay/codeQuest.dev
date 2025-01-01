@@ -120,6 +120,31 @@ export default defineConfig({
           },
         ],
       },
+       {
+        text: "Article Series",
+        items: [
+          {
+            text: "Substack Series",
+            collapsed: false,
+            items: [
+              {
+                text: "CDNs",
+                link: "https://souravbandyopadhyay.substack.com/p/the-magic-of-cdns-how-they-help-websites",
+              },
+              
+               {
+                text: "Vertical vs Horizontal",
+                link: "https://souravbandyopadhyay.substack.com/p/the-magic-of-cdns-how-they-help-websites",
+              },
+               {
+                text: "Caching",
+                link: "https://souravbandyopadhyay.substack.com/p/the-power-of-caching-boosting-performance",
+              }
+            ],
+          },
+         
+        ],
+      },
     ],
 
     footer: {
