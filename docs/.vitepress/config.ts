@@ -44,6 +44,14 @@ export default defineConfig({
         icon: "github",
         link: "https://github.com/SouravBandyopadhyay/codeQuest.dev",
       },
+      {
+        icon: "linkedin",
+        link: "https://www.linkedin.com/in/souravbandyopadhyay/",
+      },
+      {
+        icon: "x",
+        link: "https://x.com/souravb_1998",
+      },
     ],
     nav: [
       // {
@@ -120,29 +128,32 @@ export default defineConfig({
           },
         ],
       },
-       {
-        text: "Article Series",
+      {
+        text: "System Design",
         items: [
           {
-            text: "Substack Series",
+            text: "Core Concepts Explained",
             collapsed: false,
             items: [
               {
                 text: "CDNs",
                 link: "https://souravbandyopadhyay.substack.com/p/the-magic-of-cdns-how-they-help-websites",
               },
-              
-               {
+
+              {
                 text: "Vertical vs Horizontal",
                 link: "https://souravbandyopadhyay.substack.com/p/the-magic-of-cdns-how-they-help-websites",
               },
-               {
+              {
                 text: "Caching",
                 link: "https://souravbandyopadhyay.substack.com/p/the-power-of-caching-boosting-performance",
-              }
+              },
+              {
+                text: "Rate Limiting",
+                link: "https://souravbandyopadhyay.substack.com/p/rate-limiting-protecting-your-systems",
+              },
             ],
           },
-         
         ],
       },
     ],
