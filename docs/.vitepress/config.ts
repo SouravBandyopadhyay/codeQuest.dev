@@ -152,6 +152,10 @@ export default defineConfig({
                 text: "Rate Limiting",
                 link: "https://souravbandyopadhyay.substack.com/p/rate-limiting-protecting-your-systems",
               },
+              {
+                text: "Latency vs Throughput",
+                link: "https://open.substack.com/pub/souravbandyopadhyay/p/latency-vs-throughput-understanding?r=185j2n&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true",
+              },
             ],
           },
         ],
