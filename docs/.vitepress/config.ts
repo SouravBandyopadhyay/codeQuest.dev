@@ -100,31 +100,32 @@ export default defineConfig({
               },
             ],
           },
-          {
-            text: "Design Patterns",
-            collapsed: false,
-            items: [
-              { text: "Introduction", link: "/design-patterns/intro" },
-              {
-                text: "Command Pattern",
-                link: "/design-patterns/command-pattern",
-              },
-              {
-                text: "Module Pattern",
-                link: "/design-patterns/module-pattern",
-              },
-              {
-                text: "Singleton Pattern",
-                link: "/design-patterns/singleton-pattern",
-              },
-            ],
-          },
+         
           {
             text: "Node.js-Questions ",
             collapsed: false,
             items: [
               { text: "Beginner-Level", link: "/node-js/beginner-level" },
             ],
+          },
+        ],
+      },
+      {
+        text: "Design Patterns",
+        collapsed: false,
+        items: [
+          { text: "Introduction", link: "/design-patterns/intro" },
+          {
+            text: "Command Pattern",
+            link: "/design-patterns/command-pattern",
+          },
+          {
+            text: "Module Pattern",
+            link: "/design-patterns/module-pattern",
+          },
+          {
+            text: "Singleton Pattern",
+            link: "/design-patterns/singleton-pattern",
           },
         ],
       },
@@ -160,6 +161,7 @@ export default defineConfig({
           },
         ],
       },
+      
     ],
 
     footer: {
