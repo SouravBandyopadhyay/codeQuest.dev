@@ -157,6 +157,11 @@ export default defineConfig({
                 text: "Latency vs Throughput",
                 link: "https://open.substack.com/pub/souravbandyopadhyay/p/latency-vs-throughput-understanding?r=185j2n&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true",
               },
+              {
+                text: "Webhook Vs API",
+                link:"https://souravbandyopadhyay.substack.com/p/webhook-vs-api-decoding-the-differences"
+               
+              }
             ],
           },
         ],
