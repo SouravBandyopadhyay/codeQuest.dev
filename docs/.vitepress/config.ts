@@ -100,7 +100,7 @@ export default defineConfig({
               },
             ],
           },
-         
+
           {
             text: "Node.js-Questions ",
             collapsed: false,
@@ -159,14 +159,19 @@ export default defineConfig({
               },
               {
                 text: "Webhook Vs API",
-                link:"https://souravbandyopadhyay.substack.com/p/webhook-vs-api-decoding-the-differences"
-               
+                link: "https://souravbandyopadhyay.substack.com/p/webhook-vs-api-decoding-the-differences"
+
+              },
+              {
+                text: "CAP Theorem",
+                link: "https://open.substack.com/pub/souravbandyopadhyay/p/cap-theorem-the-backbone-of-distributed?utm_campaign=post&utm_medium=web"
+
               }
             ],
           },
         ],
       },
-      
+
     ],
 
     footer: {
