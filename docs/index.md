@@ -1,17 +1,17 @@
 ---
 layout: home
-title: CodeQuest - Master Technical Interviews & Coding Challenges | Complete Interview Prep Guide
-description: Ace your technical interviews with CodeQuest - your comprehensive guide to coding interviews, data structures, algorithms, system design, and more. Free resources for software engineers.
+title: Crack Coding Interviews | CodeQuest Guide
+description: Free, expert-backed guide to mastering technical interviews. Learn algorithms, system design, and behavioral strategies to land your dream tech job.
 head:
   - - meta
     - name: keywords
-      content: technical interview preparation, coding interview questions, software engineer interview, data structures and algorithms, leetcode solutions, system design interview, programming interview prep, FAANG interview guide, coding challenges, developer interview tips
+      content: technical interview prep, FAANG coding questions, system design interview, leetcode patterns, developer job prep, software engineer interview
   - - meta
     - name: og:title
-      content: CodeQuest - Complete Technical Interview Preparation Guide
+      content: Crack Coding Interviews | CodeQuest Guide
   - - meta
     - name: og:description
-      content: Master technical interviews with expert guidance on algorithms, system design, behavioral questions, and more. Your path to landing your dream tech job starts here.
+      content: Learn from real interview questions, master coding patterns, and prepare for top tech roles with our free, open-source guide.
   - - meta
     - name: og:type
       content: website
@@ -20,18 +20,18 @@ head:
       content: summary_large_image
   - - meta
     - name: twitter:title
-      content: CodeQuest - Master Technical Interviews & Ace Coding Challenges
+      content: Crack Coding Interviews | CodeQuest Guide
   - - meta
     - name: twitter:description
-      content: Free comprehensive guide to technical interview prep. Algorithms, system design, coding patterns, and real interview questions.
+      content: Free guide to mastering coding interviews, system design, and behavioral questions. Learn from real challenges asked at Google, Amazon, Meta, and more.
   - - link
     - rel: canonical
       href: https://codequest.dev
 
 hero:
   name: CodeQuest
-  text: Master Technical Interviews & Land Your Dream Tech Job
-  tagline: Free comprehensive guide covering algorithms, system design, behavioral interviews, and real coding challenges from FAANG companies.
+  text: Crack FAANG Interviews with Real Coding Challenges
+  tagline: Free, expert-backed guide to technical interviews. Learn algorithms, system design, and behavioral strategies to land your dream tech job.
   actions:
     - theme: brand
       text: Start Learning Now
@@ -41,7 +41,9 @@ hero:
       link: https://github.com/SouravBandyopadhyay/codeQuest.dev
 ---
 
-# Master Technical Interviews with CodeQuest
+
+
+## Master Technical Interviews with CodeQuest
 
 **Preparing for software engineering interviews at top tech companies?** CodeQuest provides battle-tested strategies, comprehensive tutorials, and real interview questions to help you succeed. Whether you're targeting FAANG, startups, or established tech companies, our free resources cover everything from data structures to system design.
 

@@ -3,20 +3,33 @@ import { defineConfig } from "vitepress";
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
   lang: "en-US",
-  title: "CodeQuest.dev",
-  description: "An free guide for software development interviews.",
+  title: "CodeQuest",
+  description: "Master technical interviews & coding challenges",
   base: "/",
   lastUpdated: true,
-
   cleanUrls: true,
+
   head: [
-    //Google Analytics
+    // ---- Open Graph / Twitter Meta Tags ----
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:url", content: "https://code-quest-dev.vercel.app/" }],
+    ["meta", { property: "og:title", content: "CodeQuest - Master Technical Interviews & Coding Challenges | Complete Interview Prep Guide | CodeQuest.dev" }],
+    ["meta", { property: "og:description", content: "Ace your technical interviews with CodeQuest - your comprehensive guide to coding interviews, data structures, algorithms, system design, and more. Free resources for software engineers." }],
+    ["meta", { property: "og:image", content: "https://code-quest-dev.vercel.app/og-image.png" }], // 🔥 Stored in `.vitepress/public/og-image.png`
+
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    ["meta", { name: "twitter:url", content: "https://code-quest-dev.vercel.app/" }],
+    ["meta", { name: "twitter:title", content: "CodeQuest - Master Technical Interviews & Coding Challenges | Complete Interview Prep Guide | CodeQuest.dev" }],
+    ["meta", { name: "twitter:description", content: "Ace your technical interviews with CodeQuest - your comprehensive guide to coding interviews, data structures, algorithms, system design, and more. Free resources for software engineers." }],
+    ["meta", { name: "twitter:image", content: "https://code-quest-dev.vercel.app/og-image.png" }],
+
+    // ---- Google Analytics ----
     [
       "script",
       {
         async: "",
         src: "https://www.googletagmanager.com/gtag/js?id=GTM-WPJNPGLK",
-      }, //[!code focus]
+      },
     ],
     [
       "script",
@@ -24,14 +37,14 @@ export default defineConfig({
       `window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'GTM-WPJNPGLK');`, //[!code focus]
+      gtag('config', 'GTM-WPJNPGLK');`,
     ],
 
-    //Google AdSense
+    // ---- Google AdSense ----
     [
       "script",
       {
-        "data-ad-client": "ca-pub-3517052833771002", //[!code focus]
+        "data-ad-client": "ca-pub-3517052833771002",
         async: "",
         src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
       },
@@ -53,19 +66,8 @@ export default defineConfig({
         link: "https://x.com/souravb_1998",
       },
     ],
-    nav: [
-      // {
-      //   text: 'Dropdown Menu',
-      //   items: [
-      //     { text: 'Item A', link: '/item-1' },
-      //     { text: 'Item B', link: '/item-2' },
-      //     { text: 'Item C', link: '/item-3' },
-      //   ],
-      // },
 
-      // ...
-      { text: "Support this guide", link: "/support" },
-    ],
+    nav: [{ text: "Support this guide", link: "/support" }],
 
     sidebar: [
       {
@@ -73,16 +75,8 @@ export default defineConfig({
         items: [
           { text: "Preface", link: "/preface" },
           { text: "Interview Ready", link: "/interview-preparedness" },
-          // ...
         ],
       },
-      // {
-      //   text: "Question-Bank",
-      //   items: [
-      //     { text: "Javascript-Questions", link: "/javascript-questions" },
-      //     // ...
-      //   ],
-      // },
       {
         text: "Question-Bank",
         items: [
@@ -100,7 +94,6 @@ export default defineConfig({
               },
             ],
           },
-
           {
             text: "Node.js-Questions ",
             collapsed: false,
@@ -115,18 +108,9 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: "Introduction", link: "/design-patterns/intro" },
-          {
-            text: "Command Pattern",
-            link: "/design-patterns/command-pattern",
-          },
-          {
-            text: "Module Pattern",
-            link: "/design-patterns/module-pattern",
-          },
-          {
-            text: "Singleton Pattern",
-            link: "/design-patterns/singleton-pattern",
-          },
+          { text: "Command Pattern", link: "/design-patterns/command-pattern" },
+          { text: "Module Pattern", link: "/design-patterns/module-pattern" },
+          { text: "Singleton Pattern", link: "/design-patterns/singleton-pattern" },
         ],
       },
       {
@@ -140,7 +124,6 @@ export default defineConfig({
                 text: "CDNs",
                 link: "https://souravbandyopadhyay.substack.com/p/the-magic-of-cdns-how-they-help-websites",
               },
-
               {
                 text: "Vertical vs Horizontal",
                 link: "https://souravbandyopadhyay.substack.com/p/the-magic-of-cdns-how-they-help-websites",
@@ -159,24 +142,20 @@ export default defineConfig({
               },
               {
                 text: "Webhook Vs API",
-                link: "https://souravbandyopadhyay.substack.com/p/webhook-vs-api-decoding-the-differences"
-
+                link: "https://souravbandyopadhyay.substack.com/p/webhook-vs-api-decoding-the-differences",
               },
               {
                 text: "CAP Theorem",
-                link: "https://open.substack.com/pub/souravbandyopadhyay/p/cap-theorem-the-backbone-of-distributed?utm_campaign=post&utm_medium=web"
-
-              }
+                link: "https://open.substack.com/pub/souravbandyopadhyay/p/cap-theorem-the-backbone-of-distributed?utm_campaign=post&utm_medium=web",
+              },
             ],
           },
         ],
       },
-
     ],
 
     footer: {
       message: "Made By Sourav Bandyopadhyay",
-      // copyright: 'Copyright © 2019-present Evan You'
     },
   },
 });
