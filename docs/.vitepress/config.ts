@@ -15,13 +15,13 @@ export default defineConfig({
     ["meta", { property: "og:url", content: "https://code-quest-dev.vercel.app/" }],
     ["meta", { property: "og:title", content: "CodeQuest - Master Technical Interviews & Coding Challenges | Complete Interview Prep Guide | CodeQuest.dev" }],
     ["meta", { property: "og:description", content: "Ace your technical interviews with CodeQuest - your comprehensive guide to coding interviews, data structures, algorithms, system design, and more. Free resources for software engineers." }],
-    ["meta", { property: "og:image", content: "https://code-quest-dev.vercel.app/og-image.png" }], // 🔥 Stored in `.vitepress/public/og-image.png`
+    ["meta", { property: "og:image", content: "https://code-quest-dev.vercel.app/og-image.jpg" }], // 🔥 Stored in `.vitepress/public/og-image.jpg`
 
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     ["meta", { name: "twitter:url", content: "https://code-quest-dev.vercel.app/" }],
     ["meta", { name: "twitter:title", content: "CodeQuest - Master Technical Interviews & Coding Challenges | Complete Interview Prep Guide | CodeQuest.dev" }],
     ["meta", { name: "twitter:description", content: "Ace your technical interviews with CodeQuest - your comprehensive guide to coding interviews, data structures, algorithms, system design, and more. Free resources for software engineers." }],
-    ["meta", { name: "twitter:image", content: "https://code-quest-dev.vercel.app/og-image.png" }],
+    ["meta", { name: "twitter:image", content: "https://code-quest-dev.vercel.app/og-image.jpg" }],
 
     // ---- Google Analytics ----
     [
