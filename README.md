@@ -1,4 +1,4 @@
-# CodeQuest 🚀
+# CodeQuest🚀
 ---
 ### Welcome to **CodeQuest**, initiative aimed at helping developers of all levels upskill and succeed in technical interviews. Whether you're a beginner or a seasoned developer looking for a refresher, CodeQuest is designed to provide you with a quick-reference guide and a comprehensive resource for sharpening your technical skills.
 
